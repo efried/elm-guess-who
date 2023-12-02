@@ -178,7 +178,7 @@ viewCardPickerSection model =
     case model.selectedCard of
         Just card ->
             column [ centerX, centerY, spacingXY 0 24 ]
-                [ viewChosenCard card
+                [ viewCard False card
                 , button [ centerX ]
                     { label =
                         el
@@ -206,11 +206,6 @@ viewCardPickerSection model =
                     , onPress = Just PickCard
                     }
                 )
-
-
-viewChosenCard : Card -> Element Msg
-viewChosenCard card =
-    viewCard True card
 
 
 viewCardRows : Model -> List (Element Msg)
