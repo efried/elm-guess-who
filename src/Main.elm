@@ -135,7 +135,7 @@ viewCardPickerSection : Model -> Element Msg
 viewCardPickerSection model =
     case model.selectedCard of
         Just card ->
-            column [ alignRight, centerY, spacingXY 0 24 ]
+            column [ centerX, centerY, spacingXY 0 24 ]
                 [ viewChosenCard card
                 , button [ centerX ]
                     { label = text "New Game"
@@ -144,7 +144,7 @@ viewCardPickerSection model =
                 ]
 
         Nothing ->
-            el [ alignRight, centerY, spacingXY 0 24 ]
+            el [ centerX, centerY, spacingXY 0 24 ]
                 (button [ centerX ]
                     { label = text "Choose Card"
                     , onPress = Just PickCard
