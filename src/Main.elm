@@ -92,9 +92,12 @@ view model =
                 [ column
                     [ width (fill |> minimum 300)
                     , height fill
+                    , centerY
+                    , Background.color (rgb255 205 41 44)
                     , Border.widthEach { left = 0, right = 2, bottom = 0, top = 0 }
+                    , spacingXY 0 24
                     ]
-                    [ viewCardPickerSection model ]
+                    [ column [ centerX, centerY, spacingXY 0 48 ] [ logo, viewCardPickerSection model ] ]
                 , column
                     [ Background.color (rgb255 28 68 124), width (fillPortion 4), height fill, spacingXY 24 24 ]
                     (viewCardRows model)
@@ -102,6 +105,38 @@ view model =
             )
         ]
     }
+
+
+logo : Element Msg
+logo =
+    row [ centerX ]
+        [ column []
+            [ el
+                [ alignRight
+                , Font.size 48
+                , Font.extraBold
+                , Font.color (rgb255 255 255 255)
+                ]
+                (text "Guess")
+            , el
+                [ alignRight
+                , Font.size 48
+                , Font.extraBold
+                , Font.color (rgb255 255 255 255)
+                ]
+                (text "Who")
+            ]
+        , column []
+            [ el
+                [ centerX
+                , centerY
+                , Font.size 96
+                , Font.extraBold
+                , Font.color (rgb255 255 255 255)
+                ]
+                (text "?")
+            ]
+        ]
 
 
 viewCard : Bool -> Card -> Element Msg
@@ -145,7 +180,14 @@ viewCardPickerSection model =
             column [ centerX, centerY, spacingXY 0 24 ]
                 [ viewChosenCard card
                 , button [ centerX ]
-                    { label = text "New Game"
+                    { label =
+                        el
+                            [ Background.color (rgb255 28 68 124)
+                            , Font.color (rgb255 255 255 255)
+                            , paddingXY 16 8
+                            , Border.rounded 6
+                            ]
+                            (text "New Game")
                     , onPress = Just PickCard
                     }
                 ]
@@ -153,7 +195,14 @@ viewCardPickerSection model =
         Nothing ->
             el [ centerX, centerY, spacingXY 0 24 ]
                 (button [ centerX ]
-                    { label = text "Choose Card"
+                    { label =
+                        el
+                            [ Background.color (rgb255 28 68 124)
+                            , Font.color (rgb255 255 255 255)
+                            , paddingXY 16 8
+                            , Border.rounded 6
+                            ]
+                            (text "Choose a Card")
                     , onPress = Just PickCard
                     }
                 )
