@@ -5,6 +5,7 @@ import Browser exposing (Document)
 import Dict exposing (Dict, update)
 import Element exposing (..)
 import Element.Background as Background
+import Element.Border as Border
 import Element.Font as Font
 import Element.Input exposing (button)
 import List.Extra exposing (groupsOf)
@@ -88,9 +89,14 @@ view model =
             []
             (row
                 [ width fill, height fill, centerY ]
-                [ column [ width (fill |> minimum 300), height fill ] [ viewCardPickerSection model ]
+                [ column
+                    [ width (fill |> minimum 300)
+                    , height fill
+                    , Border.widthEach { left = 0, right = 2, bottom = 0, top = 0 }
+                    ]
+                    [ viewCardPickerSection model ]
                 , column
-                    [ width (fillPortion 4), height fill, spacingXY 24 24 ]
+                    [ Background.color (rgb255 28 68 124), width (fillPortion 4), height fill, spacingXY 24 24 ]
                     (viewCardRows model)
                 ]
             )
@@ -110,21 +116,22 @@ viewCard clickable card =
         , label =
             if card.faceUp then
                 image
-                    [ height (px 150), width (px 130) ]
+                    [ height (px 150), width (px 130), Border.rounded 6, clip ]
                     { src = card.imageUrl, description = card.name }
 
             else
                 el
                     [ height (px 150)
                     , width (px 130)
-                    , Background.color (rgb255 28 68 124)
+                    , Background.color (rgb255 205 41 44)
+                    , Border.rounded 6
                     ]
                     (el
                         [ centerX
                         , centerY
                         , Font.bold
                         , Font.size 128
-                        , Font.color (rgb255 193 53 56)
+                        , Font.color (rgb255 255 255 255)
                         ]
                         (text "?")
                     )
