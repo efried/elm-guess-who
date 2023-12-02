@@ -86,7 +86,7 @@ view model =
     { title = "Guess Who"
     , body =
         [ layout
-            []
+            [ Font.family [ Font.typeface "Fredoka", Font.sansSerif ] ]
             (row
                 [ width fill, height fill, centerY ]
                 [ column
