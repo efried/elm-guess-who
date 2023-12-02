@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "npx elm-watch hot",
+    "build": "npx elm-watch make --optimize",
+    "postinstall": "elm-tooling install"
+  },
+  "devDependencies": {
+    "elm-tooling": "^1.15.0",
+    "elm-watch": "^1.1.2"
+  }
+}

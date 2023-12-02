@@ -1,0 +1,10 @@
+# NPM
+node_modules/*
+
+# Desktop Services Store on macOS
+.DS_Store
+
+# Elm
+elm-stuff
+elm.js
+dist
