@@ -230,28 +230,28 @@ main =
 
 allCards : List Card
 allCards =
-    [ { name = "alex", imageUrl = "./assets/images/alex.png", faceUp = True }
-    , { name = "alfred", imageUrl = "./assets/images/alfred.png", faceUp = True }
-    , { name = "anita", imageUrl = "./assets/images/anita.png", faceUp = True }
-    , { name = "anne", imageUrl = "./assets/images/anne.png", faceUp = True }
-    , { name = "bernard", imageUrl = "./assets/images/bernard.png", faceUp = True }
-    , { name = "bill", imageUrl = "./assets/images/bill.png", faceUp = True }
-    , { name = "charles", imageUrl = "./assets/images/charles.png", faceUp = True }
-    , { name = "claire", imageUrl = "./assets/images/claire.png", faceUp = True }
-    , { name = "david", imageUrl = "./assets/images/david.png", faceUp = True }
-    , { name = "eric", imageUrl = "./assets/images/eric.png", faceUp = True }
-    , { name = "frans", imageUrl = "./assets/images/frans.png", faceUp = True }
-    , { name = "george", imageUrl = "./assets/images/george.png", faceUp = True }
-    , { name = "herman", imageUrl = "./assets/images/herman.png", faceUp = True }
-    , { name = "joe", imageUrl = "./assets/images/joe.png", faceUp = True }
-    , { name = "maria", imageUrl = "./assets/images/maria.png", faceUp = True }
-    , { name = "max", imageUrl = "./assets/images/max.png", faceUp = True }
-    , { name = "paul", imageUrl = "./assets/images/paul.png", faceUp = True }
-    , { name = "peter", imageUrl = "./assets/images/peter.png", faceUp = True }
-    , { name = "philip", imageUrl = "./assets/images/philip.png", faceUp = True }
-    , { name = "richard", imageUrl = "./assets/images/richard.png", faceUp = True }
-    , { name = "robert", imageUrl = "./assets/images/robert.png", faceUp = True }
-    , { name = "sam", imageUrl = "./assets/images/sam.png", faceUp = True }
-    , { name = "susan", imageUrl = "./assets/images/susan.png", faceUp = True }
-    , { name = "tom", imageUrl = "./assets/images/tom.png", faceUp = True }
+    [ { name = "alex", imageUrl = "./assets/images/alex.avif", faceUp = True }
+    , { name = "alfred", imageUrl = "./assets/images/alfred.avif", faceUp = True }
+    , { name = "anita", imageUrl = "./assets/images/anita.avif", faceUp = True }
+    , { name = "anne", imageUrl = "./assets/images/anne.avif", faceUp = True }
+    , { name = "bernard", imageUrl = "./assets/images/bernard.avif", faceUp = True }
+    , { name = "bill", imageUrl = "./assets/images/bill.avif", faceUp = True }
+    , { name = "charles", imageUrl = "./assets/images/charles.avif", faceUp = True }
+    , { name = "claire", imageUrl = "./assets/images/claire.avif", faceUp = True }
+    , { name = "david", imageUrl = "./assets/images/david.avif", faceUp = True }
+    , { name = "eric", imageUrl = "./assets/images/eric.avif", faceUp = True }
+    , { name = "frans", imageUrl = "./assets/images/frans.avif", faceUp = True }
+    , { name = "george", imageUrl = "./assets/images/george.avif", faceUp = True }
+    , { name = "herman", imageUrl = "./assets/images/herman.avif", faceUp = True }
+    , { name = "joe", imageUrl = "./assets/images/joe.avif", faceUp = True }
+    , { name = "maria", imageUrl = "./assets/images/maria.avif", faceUp = True }
+    , { name = "max", imageUrl = "./assets/images/max.avif", faceUp = True }
+    , { name = "paul", imageUrl = "./assets/images/paul.avif", faceUp = True }
+    , { name = "peter", imageUrl = "./assets/images/peter.avif", faceUp = True }
+    , { name = "philip", imageUrl = "./assets/images/philip.avif", faceUp = True }
+    , { name = "richard", imageUrl = "./assets/images/richard.avif", faceUp = True }
+    , { name = "robert", imageUrl = "./assets/images/robert.avif", faceUp = True }
+    , { name = "sam", imageUrl = "./assets/images/sam.avif", faceUp = True }
+    , { name = "susan", imageUrl = "./assets/images/susan.avif", faceUp = True }
+    , { name = "tom", imageUrl = "./assets/images/tom.avif", faceUp = True }
     ]
