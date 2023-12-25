@@ -8,8 +8,11 @@ import Element.Background as Background
 import Element.Border as Border
 import Element.Font as Font
 import Element.Input exposing (button)
-import List.Extra exposing (groupsOf)
+import Html exposing (time)
+import List.Extra exposing (cycle, groupsOf, last)
 import Random
+import Task
+import Time exposing (toMinute, utc)
 
 
 type alias Card =
@@ -22,6 +25,7 @@ type alias Card =
 type alias Model =
     { cards : Dict String Card
     , selectedCard : Maybe Card
+    , secretWord : Maybe String
     }
 
 
@@ -33,6 +37,7 @@ init () =
                 allCards
                 |> Dict.fromList
       , selectedCard = Nothing
+      , secretWord = Nothing
       }
     , Cmd.none
     )
@@ -41,6 +46,7 @@ init () =
 type Msg
     = PickCard
     | ResetBoard Int
+    | GetSecretWord Int Time.Posix
     | CardClicked String
     | NoOp
 
@@ -57,6 +63,14 @@ update msg model =
                         (\_ card -> { card | faceUp = True })
                         model.cards
               , selectedCard = Array.fromList allCards |> Array.get idx
+              , secretWord = Nothing
+              }
+            , Task.perform (GetSecretWord idx) Time.now
+            )
+
+        GetSecretWord idx time ->
+            ( { model
+                | secretWord = getSecretWord idx time
               }
             , Cmd.none
             )
@@ -141,7 +155,7 @@ logo =
 
 viewCard : Bool -> Card -> Element Msg
 viewCard clickable card =
-    button []
+    button [ centerX ]
         { onPress =
             if clickable then
                 Just (CardClicked card.name)
@@ -179,6 +193,11 @@ viewCardPickerSection model =
         Just card ->
             column [ centerX, centerY, spacingXY 0 24 ]
                 [ viewCard False card
+                , el
+                    [ centerX
+                    , Font.color (rgb255 255 255 255)
+                    ]
+                    (text ("Secret Word: " ++ Maybe.withDefault "" model.secretWord))
                 , button [ centerX ]
                     { label =
                         el
@@ -255,3 +274,46 @@ allCards =
     , { name = "susan", imageUrl = "./assets/images/susan.avif", faceUp = True }
     , { name = "tom", imageUrl = "./assets/images/tom.avif", faceUp = True }
     ]
+
+
+secretWords : List String
+secretWords =
+    [ "throat"
+    , "mainstream"
+    , "convince"
+    , "basin"
+    , "permission"
+    , "plant"
+    , "straighten"
+    , "dirty"
+    , "year"
+    , "customer"
+    , "brag"
+    , "half"
+    , "carbon"
+    , "he"
+    , "dialect"
+    , "strength"
+    , "pair"
+    , "prefer"
+    , "breakdown"
+    , "intermediate"
+    , "elect"
+    , "attraction"
+    , "day"
+    , "transition"
+    ]
+
+
+getSecretWord : Int -> Time.Posix -> Maybe String
+getSecretWord cardIndex time =
+    let
+        minute : Int
+        minute =
+            toMinute utc time
+
+        secretWordIndex : Int
+        secretWordIndex =
+            (minute // 3) + cardIndex
+    in
+    cycle secretWordIndex secretWords |> last
