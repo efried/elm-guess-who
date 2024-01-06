@@ -249,30 +249,30 @@ main =
 
 allCards : List Card
 allCards =
-    [ { name = "alex", imageUrl = "./assets/images/alex.avif", faceUp = True }
-    , { name = "alfred", imageUrl = "./assets/images/alfred.avif", faceUp = True }
-    , { name = "anita", imageUrl = "./assets/images/anita.avif", faceUp = True }
-    , { name = "anne", imageUrl = "./assets/images/anne.avif", faceUp = True }
-    , { name = "bernard", imageUrl = "./assets/images/bernard.avif", faceUp = True }
-    , { name = "bill", imageUrl = "./assets/images/bill.avif", faceUp = True }
-    , { name = "charles", imageUrl = "./assets/images/charles.avif", faceUp = True }
-    , { name = "claire", imageUrl = "./assets/images/claire.avif", faceUp = True }
-    , { name = "david", imageUrl = "./assets/images/david.avif", faceUp = True }
-    , { name = "eric", imageUrl = "./assets/images/eric.avif", faceUp = True }
-    , { name = "frans", imageUrl = "./assets/images/frans.avif", faceUp = True }
-    , { name = "george", imageUrl = "./assets/images/george.avif", faceUp = True }
-    , { name = "herman", imageUrl = "./assets/images/herman.avif", faceUp = True }
-    , { name = "joe", imageUrl = "./assets/images/joe.avif", faceUp = True }
-    , { name = "maria", imageUrl = "./assets/images/maria.avif", faceUp = True }
-    , { name = "max", imageUrl = "./assets/images/max.avif", faceUp = True }
-    , { name = "paul", imageUrl = "./assets/images/paul.avif", faceUp = True }
-    , { name = "peter", imageUrl = "./assets/images/peter.avif", faceUp = True }
-    , { name = "philip", imageUrl = "./assets/images/philip.avif", faceUp = True }
-    , { name = "richard", imageUrl = "./assets/images/richard.avif", faceUp = True }
-    , { name = "robert", imageUrl = "./assets/images/robert.avif", faceUp = True }
-    , { name = "sam", imageUrl = "./assets/images/sam.avif", faceUp = True }
-    , { name = "susan", imageUrl = "./assets/images/susan.avif", faceUp = True }
-    , { name = "tom", imageUrl = "./assets/images/tom.avif", faceUp = True }
+    [ { name = "miley", imageUrl = "./assets/images/holiday-party/miley.avif", faceUp = True }
+    , { name = "hannah", imageUrl = "./assets/images/holiday-party/hannah.avif", faceUp = True }
+    , { name = "hifuu", imageUrl = "./assets/images/holiday-party/hifuu.avif", faceUp = True }
+    , { name = "shrek", imageUrl = "./assets/images/holiday-party/shrek.avif", faceUp = True }
+    , { name = "gibby", imageUrl = "./assets/images/holiday-party/gibby.avif", faceUp = True }
+    , { name = "kim", imageUrl = "./assets/images/holiday-party/kim.avif", faceUp = True }
+    , { name = "liz", imageUrl = "./assets/images/holiday-party/liz.avif", faceUp = True }
+    , { name = "jamie", imageUrl = "./assets/images/holiday-party/jamie.avif", faceUp = True }
+    , { name = "caitlin", imageUrl = "./assets/images/holiday-party/caitlin.avif", faceUp = True }
+    , { name = "evan", imageUrl = "./assets/images/holiday-party/evan.avif", faceUp = True }
+    , { name = "erin", imageUrl = "./assets/images/holiday-party/erin.avif", faceUp = True }
+    , { name = "lilwayne", imageUrl = "./assets/images/holiday-party/lilwayne.avif", faceUp = True }
+    , { name = "joel", imageUrl = "./assets/images/holiday-party/joel.avif", faceUp = True }
+    , { name = "hermione", imageUrl = "./assets/images/holiday-party/hermione.avif", faceUp = True }
+    , { name = "bolby", imageUrl = "./assets/images/holiday-party/bolby.avif", faceUp = True }
+    , { name = "randy", imageUrl = "./assets/images/holiday-party/randy.avif", faceUp = True }
+    , { name = "kevin", imageUrl = "./assets/images/holiday-party/kevin.avif", faceUp = True }
+    , { name = "guy", imageUrl = "./assets/images/holiday-party/guy.avif", faceUp = True }
+    , { name = "josh", imageUrl = "./assets/images/holiday-party/josh.avif", faceUp = True }
+    , { name = "taylor", imageUrl = "./assets/images/holiday-party/taylor.avif", faceUp = True }
+    , { name = "jill", imageUrl = "./assets/images/holiday-party/jill.avif", faceUp = True }
+    , { name = "tina", imageUrl = "./assets/images/holiday-party/tina.avif", faceUp = True }
+    , { name = "kenan", imageUrl = "./assets/images/holiday-party/kenan.avif", faceUp = True }
+    , { name = "post", imageUrl = "./assets/images/holiday-party/post.avif", faceUp = True }
     ]
 
 
